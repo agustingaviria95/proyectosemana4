@@ -38,6 +38,23 @@ main > section.resumen > div.usuario {
 	align-items: center;
 }
 
+main > section.resumen > div.usuario > i,
+main > section.metas > div.met > i {
+	width: 30px;
+	height: 30px;
+	object-fit: cover;
+}
+/* icono usuario */
+main > section.resumen > div.usuario > i {
+	content: url("./assets/icons/004-bell.png");
+}
+
+/* icono metas */
+main > section.metas > div.met > i {
+	content: url("./assets/icons/001-boton-circular-plus.png");
+}
+
+
 main > section.resumen > div.informacion {
 	width: 100%;
 	display: grid;
@@ -45,8 +62,7 @@ main > section.resumen > div.informacion {
 	border-radius: 16px;
 	color: white;
 	background-blend-mode: multiply;
-	background: linear-gradient(180deg, rgba(44, 82, 216, 0) 0%, rgba(44, 82, 216, 0.4) 100%);
-	background: #54D1ED;
+	background: linear-gradient(180deg, #54D1ED 0%, rgba(44, 82, 216, 0.8) 90%);
 }
 
 main > section.resumen > div.informacion > span:nth-child(1) {
@@ -59,12 +75,14 @@ main > section.resumen > div.informacion > span:nth-child(1) {
 main > section.resumen > div.informacion > div.imagen {
 	grid-area: 1 / 6 / span 2 / span 4;
 	height: 140px;
+	width: 140px;
 
 }
 main > section.resumen > div.informacion > div.imagen > img {
 	width: 100%;
 	height: 140px;
 	object-fit: cover;
+	border-radius: 16px;
 }
 
 
@@ -128,9 +146,8 @@ main > section.metas > div.met {
 main > section.metas > div.misMetas {
 	display: grid;
 	width: 100%;
-	grid-template: auto / 50% 50%;
-	height: 202px;
-	gap: 12px;
+	grid-template: 200px / 47% 47%;
+	column-gap: 6%;
 }
 
 main > section.metas > div.misMetas > div.viajes,
@@ -144,9 +161,9 @@ main > section.metas > div.misMetas > div.turbo {
 }
 
 main > section.metas > div.misMetas > div.viajes > div:nth-child(1),
-main > section.metas > div.misMetas > div.turbo > div:nth-child(3),
+main > section.metas > div.misMetas > div.turbo > div:nth-child(1),
 main > section.metas > div.misMetas > div.viajes > div:nth-child(3),
-main > section.metas > div.misMetas > div.turbo > div:nth-child(1)
+main > section.metas > div.misMetas > div.turbo > div:nth-child(3)
   {
 	display: flex;
 	flex-direction: column;
@@ -160,6 +177,7 @@ main > section.metas > div.misMetas > div.turbo > div:nth-child(1) > div.imagenT
 	width: 50px;
 	height: 50px;
 	object-fit: cover;
+	border-radius: 100%;
 
 }
 
@@ -168,6 +186,8 @@ main > section.metas > div.misMetas > div.turbo > div:nth-child(3) {
 	display: grid;
 	grid-template: auto / 50% 50% ;
 	gap: 8px;
+	align-items: center;
+	justify-content: center;
 }
 
 main > section.metas > div.misMetas > div.viajes > div:nth-child(3) > div.numeroVueltas > img,
@@ -175,6 +195,7 @@ main > section.metas > div.misMetas > div.turbo > div:nth-child(3) > div.partes 
 	width: 50px;
 	height: 50px;
 	object-fit: cover;
+	border-radius: 100%;
 }
 
 
@@ -192,3 +213,265 @@ main > section.metas > div.misMetas > div.turbo > div:nth-child(1) > div.imagenT
 
 }
 
+main > section.portafolio {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 12px;
+}
+
+main > section.portafolio > div.porta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main > section.portafolio > div.porta > a {
+	border: 1px solid #1bc47d;
+	width: 100px;
+	border-radius: 12px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	text-decoration: none;
+	color: #1bc47d;
+	font-weight: bold;
+	background-color: rgba(97, 214, 165, 0.3);
+}
+
+main > section.portafolio > div:nth-child(2) {
+	display: grid;
+	grid-template: 200px 70px / 47% 47%;
+	column-gap: 6%;
+	border-radius: 15px;
+	background-color: white;
+	align-items: center;
+	padding: 18px;
+}
+
+main > section.portafolio > div:nth-child(2) > div:nth-child(1) > img {
+	width: 130px;
+	height: 130px;
+	object-fit: cover;
+	border-radius: 100%;
+}
+
+main > section.portafolio > div:nth-child(2) > p {
+	grid-area: 2 / 1 / span 1 / span 2;
+}
+
+main > section.portafolio > div:nth-child(2) > div:nth-child(2) {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+	gap: 4px;
+}
+
+main > section.portafolio > div:nth-child(2) > div:nth-child(2) > a {
+	text-decoration: none;
+	color: black;
+}
+
+
+main > section.portafolio > div:nth-child(2) > div:nth-child(2) > a:nth-child(5) {
+	color: #1bc47d;
+}
+
+main > section.portafolio > div:nth-child(2) > div:nth-child(2) > div {
+	display: flex;
+	justify-content: space-between;
+	font-size: 18px;
+	align-items: center;
+	font-weight: bold;
+}
+
+main > section.portafolio > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)  > a {
+	text-decoration: none;
+	color: white;
+	border-radius: 6px;
+	width: 40px;
+	height: 20px;
+	line-height: 20px;
+	background-color: #1bc47d;
+	font-size: 14px;
+	text-align: center;
+}
+
+main > section.portafolio > div:nth-child(2) > div:nth-child(2) > div.flecha  > a {
+	width: 30px;
+	border: 0.5px solid var(--color-fondo);
+	height: 30px;
+	border-radius: 100%;
+	text-align: center;
+	text-decoration: none;
+	line-height: 30px;
+	color: gray
+}
+
+main > section.ahorro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 12px;
+	height: 350px;
+}
+
+main > section.ahorro > div:nth-child(2) {
+	display: flex;
+	background: linear-gradient(180deg, rgba(44, 82, 216, 0.8) 0%, #54D1ED 90%);
+	flex-direction: column;
+	border-radius: 13px;
+}
+main > section.ahorro > div:nth-child(2) > div.imagen {
+	position: relative;
+}
+main > section.ahorro > div:nth-child(2) > div.imagen > img {
+	width: 100%;
+	height: 200px;
+	border-top-left-radius: 13px;
+	border-top-right-radius: 13px;
+	object-fit: cover;
+}
+
+main > section.ahorro > div:nth-child(2) > div.info {
+	color: white;
+	padding: 12px;
+}
+
+
+main > section.recomendacion {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 12px;
+	background-color: white;
+	padding: 18px;
+	border-radius: 13px;
+}
+
+main > section.recomendacion > hr {
+	border-bottom: 0.1px solid var(--color-fondo);
+}
+
+main > section.recomendacion > div {
+	display: flex;
+	justify-content: space-between;
+}
+
+main > section.recomendacion > div > div:nth-child(2) > img{
+	object-fit: cover;
+	width: 100px;
+	height: 100px;
+	border-radius: 30px;
+}
+
+footer {
+	display:  grid;
+	grid-template: 20px 80px / auto 60px auto;
+}
+footer > div.opciones{
+	grid-area: 2 / 1 / span 1 / span 3;
+	background-color: white;
+	width: 100%;
+	display: grid;
+	align-items: center;
+	grid-template: 80px / repeat(5, calc(100% / 5));
+	gap: 2px;
+	border-radius: 13px;
+}
+
+footer > div.opciones > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer > div.opciones > div:nth-child(1) > i{
+	color: #54D1ED;
+}
+
+footer > div.opciones > div > i{
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+
+footer > div.opciones > div > a{
+	text-decoration: none;
+	font-size: 14px;
+	color:  gray;
+	text-transform: capitalize;
+}
+
+
+footer > div.opciones > div > span{
+width: 30px;
+	height: 30px;
+}
+
+footer > div.opciones > div:nth-child(3) {
+	display: flex;
+	justify-content: flex-end;
+}
+
+footer > div.plus {
+	width: 80px;
+	height: 80px;
+	border: 8px solid var(--color-fondo);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(180deg, #54D1ED 0%, rgba(44, 82, 216, 0.8) 90%);
+	color: white;
+	height: 60px;
+	width: 100%;
+	grid-area: 1 / 2 / span 1 / span 1;
+	border-radius: 100%;
+
+}
+
+
+/* inicio */
+footer > div.opciones > div:nth-child(1) > i{
+	width: 30px;
+	height: 30px;
+	content: url("./assets/icons/home.png");
+	object-fit: cover;
+}
+
+/* historial */
+footer > div.opciones > div:nth-child(2) > i{
+	width: 30px;
+	height: 30px;
+	content: url("./assets/icons/002-historial-medico.png");
+	object-fit: cover;
+}
+
+/* perfil */
+footer > div.opciones > div:nth-child(4) > i{
+	width: 30px;
+	height: 30px;
+	content: url("./assets/icons/003-profile-user.png");
+	object-fit: cover;
+}
+
+/* mas */
+footer > div.opciones > div:nth-child(5) > i{
+	width: 30px;
+	height: 30px;
+	content: url("./assets/icons/005-more.png");
+	object-fit: cover;
+}
+
+
+
+/* plus icono del centro */
+footer > div.plus > i {
+	width: 30px;
+	height: 30px;
+	content: url("./assets/icons/001-boton-circular-plus.png");
+	object-fit: cover;
+}
