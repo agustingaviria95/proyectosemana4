@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>proyecto4</title>
 </head>
 <body>
+    <h1>Lista de partes</h1>
+
+<input type="text" id="input">
+<button id="boton">Agregar</button>
+<ul>
+    <li>Intercooler</li>
+    <li>Presurización</li>
+</ul>
     <script>
         function holamundo(){
             console.log("hola mundo");
@@ -26,6 +34,29 @@
             }      
         }
         Iniciarsesion();
+        let boton = document.getElementById('boton');
+let input = document.getElementById('input');
+let ul = document.querySelector('ul');
+
+boton.addEventListener('click', function(){
+    if (input.value.length > 0) {
+        let li = document.createElement('li');
+        li.appendChild(document.createTextNode(input.value));
+        ul.appendChild(li);
+        input.value = '';
+        let botonEliminar = document.createElement('button');
+        botonEliminar.appendChild(document.createTextNode('Eliminar'));
+        botonEliminar.onclick = Eliminar;
+        li.appendChild(botonEliminar);
+    } 
+})
+
+function Eliminar(e) {
+    e.target.parentNode.remove();
+}
+
+
+
 
 
 
